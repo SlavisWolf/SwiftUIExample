@@ -10,12 +10,16 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        Image("mercedes")
+        .resizable()
+            .frame(/*width:100,*/ height:200)
+        //.padding(.horizontal, 50.0)
     }
 }
-
+#if DEBUG
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
     }
 }
+#endif
