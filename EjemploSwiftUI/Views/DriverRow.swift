@@ -34,17 +34,7 @@ struct DriverRow: View {
 struct DriverRow_Previews: PreviewProvider {
     static var previews: some View {
         
+        DriverRow(driver: drivers[0]).previewLayout(.fixed(width: 450, height: 100))
         
-        VStack() {
-            DriverRow(driver: drivers[0]).previewLayout(.fixed(width: 450, height: 100))
-            
-            DriverRow(driver: drivers[2]).previewLayout(.fixed(width: 450, height: 100))
-            
-            DriverRow(driver: drivers[4]).previewLayout(.fixed(width: 450, height: 100))
-            
-            DriverRow(driver: drivers[5]).previewLayout(.fixed(width: 450, height: 100))
-            
-            DriverRow(driver: drivers[1]).previewLayout(.fixed(width: 450, height: 100))
-        }
     }
 }

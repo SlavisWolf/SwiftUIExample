@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  DriverDetail.swift
 //  EjemploSwiftUI
 //
 //  Created by Antonio Jesús on 22/11/2019.
@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct DriverDetail: View {
     
     var driver : Driver
     var body: some View {
@@ -31,6 +31,7 @@ struct ContentView: View {
             Text(driver.name)
                 .font(.system(size: 35))
                 .fontWeight(.bold)
+                .minimumScaleFactor(0.5)
             
             VStack(spacing: 6.0) {
                 StatsRow(statKey: "Edad", statValue: String(driver.age) )
@@ -42,10 +43,15 @@ struct ContentView: View {
         
     }
 }
-#if DEBUG
-struct ContentView_Previews: PreviewProvider {
+struct DriverDetail_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(driver: drivers[5])
+        
+        
+        Group {
+            
+            DriverDetail(driver: drivers[5])
+            
+            DriverDetail(driver: drivers[7]).previewDevice("iPhone 8").previewDisplayName("iPhone 8")
+        }
     }
 }
-#endif

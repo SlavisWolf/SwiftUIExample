@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct Driver {
+struct Driver: Identifiable {
 
     var id: Int
     var name: String
@@ -17,6 +17,8 @@ struct Driver {
     var age: Int
     var number: Int
     var birthPlace: String
+    
+    
     
 }
 

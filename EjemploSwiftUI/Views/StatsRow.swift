@@ -18,10 +18,12 @@ struct StatsRow: View {
                 .font(.system(size:21))
                 .fontWeight(.semibold)
                 .padding(.leading, 40)
+                .layoutPriority(1.3)
             Text(statValue)
                 .font(.system(size: 21))
                     .fontWeight(.ultraLight)
                 .padding(.trailing, 40)
+                .layoutPriority(1.1)
             Spacer()
         }
     }
@@ -29,6 +31,6 @@ struct StatsRow: View {
 
 struct StatsRow_Previews: PreviewProvider {
     static var previews: some View {
-        StatsRow(statKey: "Edad", statValue: "34" )
+        StatsRow(statKey: "Lugar de nacimiento", statValue: "Irlanda" ).previewLayout(.fixed(width: 360, height: 40))
     }
 }
